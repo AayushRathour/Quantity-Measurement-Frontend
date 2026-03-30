@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quantity Measurement</title>
+<link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header-wrap">
+        <div class="header">Welcome To Quantity Measurement</div>
+        <button id="logoutBtn" class="logout-btn" type="button">Logout</button>
+    </div>
+
+    <!-- TYPE -->
+    <p class="label">CHOOSE TYPE</p>
+    <div class="types">
+        <div class="type active" data-type="length">📏<span>Length</span></div>
+        <div class="type" data-type="weight">⚖️<span>Weight</span></div>
+        <div class="type" data-type="temperature">🌡️<span>Temperature</span></div>
+        <div class="type" data-type="volume">🧪<span>Volume</span></div>
+    </div>
+
+    <!-- ACTION -->
+    <p class="label">CHOOSE ACTION</p>
+    <div class="actions">
+        <button id="comparisonBtn">Comparison</button>
+        <button id="conversionBtn">Conversion</button>
+        <button id="arithBtn" class="active">Arithmetic</button>
+    </div>
+
+    <!-- VALUES -->
+    <div class="values">
+        <div>
+            <p>VALUE 1</p>
+            <input type="number" value="1">
+            <select id="unit1"></select>
+        </div>
+
+        <!-- OPERATOR -->
+        <div id="operatorSection">
+            <div id="selectedOp">+</div>
+            <div class="operators">
+                <button data-op="+">+</button>
+                <button data-op="-">-</button>
+                <button data-op="*">*</button>
+                <button data-op="/">/</button>
+            </div>
+        </div>
+
+        <div>
+            <p>VALUE 2</p>
+            <input type="number" value="1">
+            <select id="unit2"></select>
+        </div>
+    </div>
+
+    <div class="result">
+        <div class="result-left">
+            <p>RESULT</p>
+            <h2 id="resultValue">0</h2>
+        </div>
+
+        <select id="resultUnit"></select>
+    </div>
+
+</div>
+
+<script src="/js/dashboard.js"></script>
+<script src="/js/quantity-length.js"></script>
+</body>
+</html>

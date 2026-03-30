@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auth</title>
+<link rel="stylesheet" href="/css/auth.css">
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- LEFT SIDE -->
+    <div class="left">
+        <div class="illustration">
+            <div class="icon-chip icon-ruler">📏</div>
+            <div class="icon-chip icon-scale">⚖️</div>
+            <div class="icon-chip icon-temp">🌡️</div>
+            <div class="icon-chip icon-lab">🧪</div>
+        </div>
+        <h3>MEASUREMENT TOOL</h3>
+        <p>Fast and simple unit conversions in one place.</p>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+        <div class="tabs">
+            <span id="loginTab" class="active">LOGIN</span>
+            <span id="signupTab">SIGNUP</span>
+        </div>
+
+        <!-- LOGIN -->
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Email Id" required>
+            <div class="password-field">
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="button" class="toggle-password" data-target="loginPassword" aria-label="Show password">Show</button>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- SIGNUP -->
+        <form id="signupForm" class="hidden">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="signupEmail" placeholder="Email Id" required>
+            <div class="password-field">
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="button" class="toggle-password" data-target="password" aria-label="Show password">Show</button>
+            </div>
+            <div class="password-field">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <button type="button" class="toggle-password" data-target="confirmPassword" aria-label="Show password">Show</button>
+            </div>
+            <button type="submit">Signup</button>
+        </form>
+
+        <button type="button" id="googleLoginBtn" class="google-login-btn google-single-btn">Continue with Google</button>
+    </div>
+
+</div>
+
+<script src="/js/auth-api.js"></script>
+<script src="/js/auth.js"></script>
+</body>
+</html>
